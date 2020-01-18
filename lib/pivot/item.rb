@@ -1,13 +1,14 @@
 module Pivot
   class Item
-    attr_reader :name, :assignee, :points
+    attr_accessor :assignee
+    attr_reader :name, :points
 
     AVAILABLE_PROJECT_CODES = %w[EREC AZR].freeze
 
-    def initialize(name:, assignee:, points:)
+    def initialize(name:, points:, assignee: nil)
       @name = name
-      @assignee = assignee
       @points = points
+      @assignee = assignee
     end
 
     def +(another_item)

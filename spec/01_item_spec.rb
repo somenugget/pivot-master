@@ -54,5 +54,4 @@ RSpec.describe Pivot::Item do
       expect(some_item).not_to be_valid
     end
   end
-
 end

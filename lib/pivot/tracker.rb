@@ -17,7 +17,7 @@ module Pivot
 
       def total_points(items, assignee: nil)
         (assignee ? assignee_items(items, assignee) : items_with_minimal_points(items))
-          .sum { |item| item[:points]  }
+          .sum { |item| item[:points] }
       end
 
       def unique_assignees(items)
@@ -36,7 +36,7 @@ module Pivot
 
       def assignee_items(items, assignee)
         items
-          .select { |item| item[:assignee] == assignee  }
+          .select { |item| item[:assignee] == assignee }
       end
     end
   end
